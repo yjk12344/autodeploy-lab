@@ -1,8 +1,17 @@
-- name: copy file to server
-  uses: appleboy/scp-action@master
-  with:
-    host: ${{ secrets.HOST }}
-    username: ${{ secrets.SSH_USER_NAME }}
-    password: ${{ secrets.SSH_PWD }}
-    source: "."
-    target: "/var/www/html"
+name: deploy on push
+on: [push]
+jobs:
+  deploy-app:
+    runs-on: ubuntu-latest
+    steps:
+      - name: check out the code to build server
+        uses: actions/checkout@v4
+
+      - name: copy file to server
+        uses: appleboy/scp-action@master
+        with:
+          host: ${{ secrets.HOST }}
+          username: ${{ secrets.SSH_USER_NAME }}
+          password: ${{ secrets.SSH_PWD }}
+          source: "."
+          target: "/var/www/html"
