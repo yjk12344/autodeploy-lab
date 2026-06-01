@@ -1,0 +1,12 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <title>Lab07自动部署-应嘉康</title>
+</head>
+<body>
+    <h1>GitHub Actions自动部署实验</h1>
+    <h2>姓名：应嘉康</h2>
+    <p>测试静态网页自动发布到Nginx服务器</p>
+</body>
+</html>
